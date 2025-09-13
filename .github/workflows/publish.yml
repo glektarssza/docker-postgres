@@ -46,5 +46,6 @@ jobs:
         run: ${{matrix.runs.test}}
       - name: List Docker Images
         run: ${{matrix.runs.images}}
+      - uses: docker-library/bashbrew@HEAD
       - name: Publish Docker Images
         run: bashbrew push --all
